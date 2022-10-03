@@ -7,6 +7,7 @@
     <title>Portfolio</title>
 
     <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
   </head>
   <body>
     <div id="header">
@@ -27,8 +28,9 @@
         </div>
       </div>
     </div>
-
-    <!-----------About-->
+  </body>
+  <!---------about-->
+  <main>
     <div id="about">
       <div class="container">
         <div class="row">
@@ -36,18 +38,95 @@
             <img src="images/user.png" />
           </div>
           <div class="about-col-2">
-            <h1 class="sub-title">About ME</h1>
+            <h1 class="sub-title">About me</h1>
             <p>
-              jgfhgggggggggggggggggggggggggggggdffffffffffffffffffffffffffffffffffffffffffffjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj
+              greetings friend, seriously you are a crack, I am from Colombia
+              and I do not understand much English, in fact only basic but I
+              managed to understand your explanation, your videos are of
+              incredible quality and I hope you continue uploading more content
+              because I have really learned a lot with you Greetings from your
+              good sub from Colombia 8 greetings friend, seriously you are a
+              crack, I am from Colombia and I do not understand much English, in
+              fact only basic but I managed to understand your explanation, your
+              videos are of incredible quality and I hope you continue uploading
+              more content because I have really learned a lot with you
+              Greetings from your good sub from Colombia 8
             </p>
-            <div class="tab-titels">
-              <p class="tab-links active link">skills</p>
-              <p class="tab-links">Experiance</p>
-              <p class="tab-links">Education</p>
+            <div class="tab-titles">
+              <p class="tab-links active-link" onclick="opentab('skills')">
+                Skills
+              </p>
+              <p class="tab-links" onclick="opentab('experiance')">
+                Experiance
+              </p>
+              <p class="tab-links" onclick="opentab('education')">Education</p>
+            </div>
+            <div class="tab-contents active-tab" id="skills">
+              <ul>
+                <li>
+                  <span>UK</span><br />Disanaged to understand your explanation,
+                  your videos are of incredible quality
+                </li>
+                <li>
+                  <span>UK</span><br />Disanaged to understand your explanation,
+                  your videos are of incredible quality
+                </li>
+                <li>
+                  <span>UK</span><br />Disanaged to understand your explanation,
+                  your videos are of incredible quality
+                </li>
+              </ul>
+            </div>
+            <div class="tab-contents" id="experiance">
+              <ul>
+                <li>
+                  <span>kk</span><br />Disanaged to understand your explanation,
+                  your videos are of incredible quality
+                </li>
+                <li>
+                  <span>kk</span><br />Disanaged to understand your explanation,
+                  your videos are of incredible quality
+                </li>
+                <li>
+                  <span>kk</span><br />Disanaged to understand your explanation,
+                  your videos are of incredible quality
+                </li>
+              </ul>
+            </div>
+            <div class="tab-contents" id="education">
+              <ul>
+                <li>
+                  <span>gg</span><br />Disanaged to understand your explanation,
+                  your videos are of incredible quality
+                </li>
+                <li>
+                  <span>gg</span><br />Disanaged to understand your explanation,
+                  your videos are of incredible quality
+                </li>
+                <li>
+                  <span>gg</span><br />Disanaged to understand your explanation,
+                  your videos are of incredible quality
+                </li>
+              </ul>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </body>
+    <!-----------------sevices---------->
+    <script>
+      var tablinks = document.getElementsByClassName("tab-links");
+      var tabcontents = document.getElementsByClassName("tab-contents");
+      function opentab(tabname) {
+        for (tablink of tablinks) {
+          tablink.classList.remove("active-link");
+        }
+        for (tabcontent of tabcontents) {
+          tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+      }
+    </script>
+  </main>
 </html>
